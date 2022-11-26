@@ -1,0 +1,38 @@
+name = input("Enter your name: ")
+print("Welcome", name, "to this adventure! ")
+
+answer = input("You are on the way on your first monster quest and you go left and right. Which way would you like to go? ").lower()
+
+if answer == "left":
+    answer = input("you come to a bridge, and it look broken, do you want to accross it or go back: ")
+    if answer == "back":
+        print("you go back you lose!")
+    elif answer == "cross":
+        answer = input("you cross the bridge and you encounter a bandit. Do you want to kill them (yes/no)? ")
+        if answer == "yes":
+            print("you tried to kill them but they have a reinforcement and you lose!")
+        elif answer == "no":
+            print("you run away the bandit and go back you lose!")
+        else:
+            print('not a valid option. You lose!')
+            
+elif answer == "right":
+    answer = input("you come to a dungeon, do you want to enter it or go back: ")
+    if answer == "back":
+        print("you go back. You lose! ")
+    elif answer == "enter":
+        answer = input("you found the monster in the quest. you can kill it or ran away? type ran to ran away and kill to kill it: ")
+        
+        if answer == "kill":
+            print("you killed the monster. You Win! ")
+        elif answer == "ran":
+            pint("you ran away. You lose! ")
+        else:
+            print('not a valid option. You lose!')
+    else:
+        print('not a valid option. You lose!')
+    
+else:
+    print('not a valid option. You lose!')
+    
+print("Thank you for playing", name)
